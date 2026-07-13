@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matratzen-Test 2026 – Die 5 meistgekauften Modelle im Vergleich</title>
+<link rel="icon" href="images/hisleep_favicon.png">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #3d3d3d;
+    --accent: #1d7a5f;
+    --accent-dark: #145842;
+    --warn: #b3271e;
+    --bg-soft: #f7f5f0;
+    --card-border: #e2ded4;
+    --gold: #c8932f;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: #fff;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+
+  .disclosure {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    padding: 10px 16px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+  .disclosure b { color: var(--ink); }
+
+  header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 14px 24px;
+  }
+  header .inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  header .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  header .brand img { height: 32px; width: auto; }
+  header nav { font-size: 15px; color: #666; }
+
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+
+  /* HERO */
+  .hero {
+    background: var(--bg-soft);
+    padding: 48px 20px 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--card-border);
+  }
+  .eyebrow {
+    display: inline-block;
+    background: var(--accent-dark);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    padding: 7px 16px;
+    border-radius: 30px;
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-size: 34px;
+    line-height: 1.25;
+    margin: 0 0 20px;
+    font-weight: 800;
+  }
+  .hero p.sub {
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  /* SECTION HEADINGS */
+  h2 {
+    font-size: 26px;
+    line-height: 1.3;
+    margin: 0 0 18px;
+    font-weight: 800;
+  }
+  h3 { font-size: 20px; margin: 0 0 8px; font-weight: 700; }
+  section { padding: 44px 0; }
+  section.alt { background: var(--bg-soft); }
+  p { margin: 0 0 16px; }
+
+  /* CHECKLIST BLOCK */
+  .check-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 24px 0;
+  }
+  .check-item {
+    background: #fff;
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    font-size: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .check-item .mark { color: var(--accent); font-weight: 900; font-size: 18px; flex-shrink: 0; }
+
+  /* WINNER CARD */
+  .winner-wrap { padding: 8px 0 44px; }
+  .rank-tag {
+    display: inline-block;
+    background: var(--gold);
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 8px 18px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+  }
+  .card {
+    background: #fff;
+    border: 2px solid var(--accent);
+    border-radius: 14px;
+    padding: 26px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  }
+  .card-top {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 26px;
+    align-items: start;
+  }
+  .card-top img { border-radius: 8px; }
+  .product-title { font-size: 24px; font-weight: 800; margin: 0 0 4px; }
+  .product-title a { text-decoration: none; color: var(--accent-dark); }
+  .site-link { font-size: 15px; color: #888; margin-bottom: 14px; }
+  .price-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+  .price { font-size: 32px; font-weight: 800; }
+  .price-old { font-size: 18px; color: #999; text-decoration: line-through; }
+  .discount-code {
+    display: inline-block;
+    background: #fdf1de;
+    color: #8a5a10;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+  }
+  ul.bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 18px;
+  }
+  ul.bullets li {
+    font-size: 15.5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    line-height: 1.4;
+  }
+  ul.bullets li.con { color: var(--warn); }
+  .mark-ok { color: var(--accent); font-weight: 900; flex-shrink: 0; }
+  .mark-no { color: var(--warn); font-weight: 900; flex-shrink: 0; }
+
+  .trust-row {
+    display: flex;
+    gap: 10px;
+    margin: 18px 0;
+    padding: 16px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+  .trust-row div { flex: 1; font-size: 13.5px; color: #555; }
+  .trust-row .icon { font-size: 22px; display: block; margin-bottom: 4px; }
+
+  .cta-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 800;
+    font-size: 19px;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 6px;
+  }
+  .cta-btn:hover { background: var(--accent-dark); }
+  .cta-sub { text-align: center; font-size: 13.5px; color: #888; margin-top: 10px; }
+
+  /* WARENBERICHT */
+  .report-block { margin-top: 18px; }
+  .report-block h3 { color: var(--accent-dark); }
+  .report-block .item { margin-bottom: 22px; }
+
+  /* OTHERS */
+  .other-card {
+    background: #fff;
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+  .other-card img { border-radius: 6px; }
+  .other-rank {
+    font-size: 13px;
+    font-weight: 800;
+    color: #999;
+    margin-bottom: 4px;
+    letter-spacing: 0.03em;
+  }
+  .other-name { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+  .other-price { font-size: 15px; color: #777; margin-bottom: 10px; }
+  .other-pros-cons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    font-size: 14.5px;
+  }
+  .other-pros-cons span { display: flex; align-items: center; gap: 5px; }
+  .other-pros-cons .pro { color: var(--accent-dark); }
+  .other-pros-cons .con { color: var(--warn); }
+
+  /* STATS */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin: 30px 0 0;
+    text-align: center;
+  }
+  .stats-row .num { font-size: 26px; font-weight: 800; color: var(--accent-dark); }
+  .stats-row .lbl { font-size: 13px; color: #777; }
+
+  footer {
+    background: var(--ink);
+    color: #ccc;
+    padding: 34px 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+  footer a { color: #eee; text-decoration: underline; margin: 0 8px; }
+  footer .fine { margin-top: 14px; color: #999; font-size: 12.5px; }
+
+  @media (max-width: 640px) {
+    body { font-size: 16.5px; }
+    h1 { font-size: 27px; }
+    h2 { font-size: 22px; }
+    .check-grid { grid-template-columns: 1fr; }
+    .card-top { grid-template-columns: 1fr; }
+    ul.bullets { grid-template-columns: 1fr; }
+    .other-card { grid-template-columns: 80px 1fr; }
+    .stats-row { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="disclosure"><b>Anzeige / Advertorial</b> im Besitz und betrieben von Hisleep, einer Marke der Trend Shopping Global</div>
+
+<header>
+  <div class="inner">
+    <div class="brand">
+      <img src="images/hisleep_logo_web.png" alt="Hisleep Logo">
+    </div>
+    <nav>Matratzen-Test 2026</nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Matratzen-Test 2026</span>
+    <h1>Wir haben 5 der meistgekauften Matratzen verglichen –<br>nur eine hat uns wirklich überzeugt</h1>
+    <p class="sub">Wachen Sie morgens steifer auf als abends? Wir zeigen Ihnen, worauf es bei einer guten Matratze wirklich ankommt – und welches Modell im Vergleich am besten abgeschnitten hat.</p>
+  </div>
+</div>
+
+<!-- EDUCATIONAL / CHECKLIST -->
+<section>
+  <div class="wrap">
+    <h2>Worauf Sie beim Matratzenkauf achten sollten</h2>
+    <p>Viele Matratzen sehen auf den ersten Blick ähnlich aus. Der Unterschied zeigt sich erst nach ein paar Monaten – oder eben nicht, wenn die Qualität stimmt. Vier Punkte sind entscheidend:</p>
+    <div class="check-grid">
+      <div class="check-item"><span class="mark">✓</span> <span><b>Härtegrad passend zum Körpergewicht</b> – eine Einheitsmatratze passt selten für alle</span></div>
+      <div class="check-item"><span class="mark">✓</span> <span><b>Formstabiles Material</b> – gutes Raumgewicht verhindert Kuhlenbildung über die Jahre</span></div>
+      <div class="check-item"><span class="mark">✓</span> <span><b>Zertifizierte Qualität</b> – OEKO-TEX Standard 100 als Nachweis für Schadstofffreiheit</span></div>
+      <div class="check-item"><span class="mark">✓</span> <span><b>Echtes Rückgaberecht</b> – ausreichend Probeschlafen statt 14-Tage-Feigenblatt</span></div>
+    </div>
+    <p>Wir haben die fünf meistgekauften Modelle auf dem deutschen Markt anhand dieser Kriterien geprüft. Das Ergebnis: nur ein Modell erfüllt alle vier Punkte gleichzeitig.</p>
+  </div>
+</section>
+
+<!-- WINNER -->
+<section class="alt winner-wrap">
+  <div class="wrap">
+    <span class="rank-tag">🏆 Platz 1 – Testsieger</span>
+    <div class="card">
+      <div class="card-top">
+        <div>
+          <img src="images/hisleep_traummatratze_web.jpg" alt="Die Traummatratze von Hisleep">
+        </div>
+        <div>
+          <p class="product-title"><a href="https://de.hisleeptime.com/collections/matratzen/products/traummatratze">Die Traummatratze von Hisleep</a></p>
+          <p class="site-link">www.hisleeptime.de</p>
+          <div class="price-row">
+            <span class="price">269 €</span>
+            <span class="price-old">385 €</span>
+          </div>
+          <span class="discount-code">15% Extra-Rabatt mit Code SCHLAF15</span>
+
+          <ul class="bullets">
+            <li><span class="mark-ok">✓</span> 2 Härtegrade: 45–150 kg</li>
+            <li><span class="mark-ok">✓</span> Ideal für Rücken-, Seiten- &amp; Bauchschläfer</li>
+            <li><span class="mark-ok">✓</span> Neue Hybridtechnologie</li>
+            <li><span class="mark-ok">✓</span> Atmungsaktiv, waschbar 60°C</li>
+            <li><span class="mark-ok">✓</span> 30 Nächte risikofrei testen</li>
+            <li><span class="mark-ok">✓</span> Made in Germany, OEKO-TEX</li>
+            <li><span class="mark-ok">✓</span> Gratis Versand &amp; Rückversand</li>
+            <li><span class="mark-ok">✓</span> 50 € Rabatt ab 2. Matratze</li>
+            <li class="con"><span class="mark-no">✕</span> Aufgrund hoher Nachfrage oft ausverkauft</li>
+          </ul>
+
+          <div class="trust-row">
+            <div><span class="icon">🚚</span>Kostenloser Versand</div>
+            <div><span class="icon">🔒</span>Sichere Bezahlung</div>
+            <div><span class="icon">↩️</span>30 Tage Rückgabe</div>
+          </div>
+
+          <a class="cta-btn" href="https://de.hisleeptime.com/collections/matratzen/products/traummatratze">Zum Angebot »</a>
+          <p class="cta-sub">15% Extra-Rabatt heute mit Code SCHLAF15</p>
+        </div>
+      </div>
+
+      <div class="report-block">
+        <h2 style="margin-top:32px;">Unser Warenbericht</h2>
+        <p>Diese Matratze überzeugt durch höchsten Liegekomfort, der durch beste Materialien und ein hohes Maß an Personalisierung erreicht wird. Sie ist für alle Körpertypen ideal und in zahlreichen Längen erhältlich.</p>
+
+        <div class="item">
+          <h3>Härtegrade</h3>
+          <p>Die beiden Seiten der Matratze besitzen unterschiedliche Härtegrade und lassen sich einfach wenden. Dadurch ist das Modell für Körpergewichte zwischen 45 und 150 kg ideal. Der mittlere Härtegrad (H3) unterstützt die Wirbelsäule und ist für Rücken- und Seitenschläfer empfehlenswert. Der harte Grad (H4) verhindert Kuhlenbildung bei höherem Körpergewicht.</p>
+        </div>
+        <div class="item">
+          <h3>Qualität &amp; Formstabilität</h3>
+          <p>Der rückfedernde Hybridschaumkern behält seine Formstabilität selbst bei hohem Gewicht. Der Hersteller garantiert eine Lebenszeit von mindestens 10 Jahren. Der Funktionsbezug aus 3D-Mesh ist besonders atmungsaktiv, hautschonend und hypoallergisch.</p>
+        </div>
+        <div class="item">
+          <h3>Sicherheit &amp; Umwelt</h3>
+          <p>Die in Deutschland hergestellte Matratze erfüllt die OEKO-TEX 100 Standards und ist garantiert schadstofffrei. Sie enthält keine tierischen Bestandteile und ist deshalb vegan.</p>
+        </div>
+        <div class="item">
+          <h3>Serviceversprechen</h3>
+          <p>Hisleep wirbt offen mit seiner Geld-zurück-Garantie. Wir haben eine benutzte Matratze nach 29 Nächten Probeliegen zurückgesandt – der Gesamtpreis wurde zwei Tage nach Erhalt der Ware ohne Probleme zurückerstattet.</p>
+        </div>
+      </div>
+
+      <a class="cta-btn" href="https://de.hisleeptime.com/collections/matratzen/products/traummatratze">Zum Angebot »</a>
+    </div>
+
+    <div class="stats-row">
+      <div><div class="num">40+</div><div class="lbl">Matratzen verglichen</div></div>
+      <div><div class="num">10 J.</div><div class="lbl">Herstellergarantie</div></div>
+      <div><div class="num">30</div><div class="lbl">Nächte Probeschlafen</div></div>
+      <div><div class="num">45–150</div><div class="lbl">kg Körpergewicht</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHERS -->
+<section>
+  <div class="wrap">
+    <h2>Und die anderen Modelle im Vergleich?</h2>
+    <p>Fairerweise: Nicht jedes Modell ist schlecht. Aber der Abstand zum Testsieger ist in jedem Fall deutlich.</p>
+
+    <div class="other-card">
+      <img src="images/emma_premium25_web.jpg" alt="Emma Original Pro Matratze">
+      <div>
+        <div class="other-rank">PLATZ 2</div>
+        <p class="other-name">Emma Original Pro Matratze</p>
+        <p class="other-price">666,65 €</p>
+        <div class="other-pros-cons">
+          <span class="pro">✓ Gute Atmungsaktivität</span>
+          <span class="con">✕ Geringe Höhe</span>
+          <span class="con">✕ Geringe Lebensdauer</span>
+          <span class="con">✕ Gehäuft Liegekuhlen</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="other-card">
+      <img src="images/bett1_bodyguard_web.jpg" alt="Bett1 BODYGUARD Matratze">
+      <div>
+        <div class="other-rank">PLATZ 3</div>
+        <p class="other-name">Bett1 BODYGUARD Matratze</p>
+        <p class="other-price">199,00 €</p>
+        <div class="other-pros-cons">
+          <span class="pro">✓ 9-Zonen-Matratze</span>
+          <span class="pro">✓ Hypoallergisch</span>
+          <span class="con">✕ Mittelmäßige Atmungsaktivität</span>
+          <span class="con">✕ Preis/Leistung</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="other-card">
+      <img src="images/ravensberger_web.jpg" alt="Ravensberger Latexmatratze">
+      <div>
+        <div class="other-rank">PLATZ 4</div>
+        <p class="other-name">Ravensberger Latexmatratze</p>
+        <p class="other-price">449,00 €</p>
+        <div class="other-pros-cons">
+          <span class="pro">✓ Gute Höhe</span>
+          <span class="pro">✓ Hybridschaumkern</span>
+          <span class="con">✕ Starke Kuhlenbildung</span>
+          <span class="con">✕ Geringe Lebensdauer</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="other-card">
+      <img src="images/ma_taschenfederkern_web.jpg" alt="AM Qualitätsmatratzen Deluxe Taschenfederkernmatratze">
+      <div>
+        <div class="other-rank">PLATZ 5</div>
+        <p class="other-name">AM Qualitätsmatratzen Deluxe Taschenfederkernmatratze</p>
+        <p class="other-price">332,68 €</p>
+        <div class="other-pros-cons">
+          <span class="pro">✓ Lange Garantie</span>
+          <span class="con">✕ Geringe Materialqualität</span>
+          <span class="con">✕ Extreme Kuhlenbildung</span>
+          <span class="con">✕ Häufig Rückenschmerzen</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="alt" style="text-align:center;">
+  <div class="wrap">
+    <h2>Ihr Rücken hat eine bessere Nacht verdient</h2>
+    <p>Testsieger 2026 + 15% Extra-Rabatt mit Code SCHLAF15</p>
+    <a class="cta-btn" href="https://de.hisleeptime.com/collections/matratzen/products/traummatratze" style="max-width:420px; margin:0 auto;">Zum Angebot »</a>
+    <p class="cta-sub">🛡️ Made in Germany &nbsp; · &nbsp; 30 Tage Probeschlafen &nbsp; · &nbsp; Kostenloser Versand</p>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a href="#">Impressum</a> · <a href="#">Datenschutz</a> · <a href="#">Advertiser Disclosure</a>
+  </div>
+  <div class="fine">Diese Seite ist ein Advertorial von Hisleep (Trend Shopping Global) und dient der Bewerbung der Traummatratze. Preise und Rabattaktionen ohne Gewähr, Stand siehe Shop.</div>
+</footer>
+
+</body>
+</html>

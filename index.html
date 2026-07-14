@@ -55,7 +55,8 @@
   .trust-bar .lbl { font-size: 12px; color: #aaa; margin-top: 2px; }
 
   .hero { background: var(--bg-soft); padding: 54px 20px 48px; border-bottom: 1px solid var(--card-border); }
-  .hero .wrap { max-width: 820px; margin: 0 auto; }
+  .hero .wrap { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: center; }
+  .hero .photo { width: 100%; height: auto; border-radius: 14px; display: block; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
   .eyebrow {
     display: inline-block; background: var(--red); color: #fff;
     font-weight: 700; font-size: 14px; letter-spacing: 0.03em;
@@ -66,6 +67,10 @@
   .hero .callout {
     background: #fff; border: 1px solid var(--card-border);
     border-radius: 10px; padding: 20px 24px; font-size: 16.5px; color: var(--ink-soft);
+  }
+  @media (max-width: 860px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .hero .photo { max-width: 420px; margin: 0 auto 20px; }
   }
 
   .layout { max-width: 1080px; margin: 0 auto; padding: 40px 20px; display: grid; grid-template-columns: 1fr 260px; gap: 40px; }
@@ -86,6 +91,13 @@
   h3 { font-size: 20px; margin: 0 0 8px; font-weight: 700; }
   p { margin: 0 0 16px; }
   section.block { margin-bottom: 48px; }
+
+  .intro-photo-row { display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 26px; align-items: center; }
+  .intro-photo-row img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; max-height: 260px; }
+  @media (max-width: 700px) {
+    .intro-photo-row { grid-template-columns: 1fr; }
+    .intro-photo-row img { max-height: 220px; order: -1; }
+  }
 
   .check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0; }
   .check-item {
@@ -222,10 +234,13 @@
 
 <div class="hero">
   <div class="wrap">
-    <span class="eyebrow">Matratzen Test 2026</span>
-    <h1>Matratzen Test: Wir haben 5 der meistgekauften Modelle verglichen –<br>nur einer ist unser Matratzen Testsieger</h1>
-    <p class="sub">Wachen Sie morgens steifer auf als abends? Wir zeigen Ihnen, worauf es bei der besten Matratze für Ihren Schlaf wirklich ankommt.</p>
-    <div class="callout">Wenn Sie nach einer neuen Matratze suchen, werden Sie im Internet unzählig viele Angebote finden. Dass sich Härtegrad-Angaben und Materialqualität zwischen den Anbietern stark unterscheiden, ist auf den ersten Blick selten erkennbar. Entscheiden Sie sich für das falsche Modell, ist die Enttäuschung nach ein paar Monaten groß. Unsere Redaktion hat deshalb die fünf meistgekauften Matratzen anhand einheitlicher Kriterien verglichen.</div>
+    <div>
+      <span class="eyebrow">Matratzen Test 2026</span>
+      <h1>Matratzen Test: Wir haben 5 der meistgekauften Modelle verglichen –<br>nur einer ist unser Matratzen Testsieger</h1>
+      <p class="sub">Wachen Sie morgens steifer auf als abends? Wir zeigen Ihnen, worauf es bei der besten Matratze für Ihren Schlaf wirklich ankommt.</p>
+      <div class="callout">Wenn Sie nach einer neuen Matratze suchen, werden Sie im Internet unzählig viele Angebote finden. Dass sich Härtegrad-Angaben und Materialqualität zwischen den Anbietern stark unterscheiden, ist auf den ersten Blick selten erkennbar. Entscheiden Sie sich für das falsche Modell, ist die Enttäuschung nach ein paar Monaten groß. Unsere Redaktion hat deshalb die fünf meistgekauften Matratzen anhand einheitlicher Kriterien verglichen.</div>
+    </div>
+    <img class="photo" src="images/hisleep_hero_stretch_web.jpg" alt="Frau streckt sich ausgeschlafen und erholt im Bett auf ihrer Matratze">
   </div>
 </div>
 
@@ -249,7 +264,10 @@
 
     <section class="block" id="schlafqualitaet">
       <h2>Warum die richtige Matratze für Ihren Schlaf entscheidend ist</h2>
-      <p>Im Schlaf soll sich die Wirbelsäule in ihrer natürlichen, doppelt S-förmigen Haltung entspannen können. Stützt die Matratze nicht richtig, kann die Wirbelsäule über die Liegedauer abknicken oder durchhängen – typische Folgen sind Verspannungen und ein Aufwachen mit steifem Rücken. Eine passende Matratze federt vor allem an den Druckpunkten Schulter, Hüfte und Becken ab, während sie den restlichen Körper ausreichend stützt.</p>
+      <div class="intro-photo-row">
+        <p>Im Schlaf soll sich die Wirbelsäule in ihrer natürlichen, doppelt S-förmigen Haltung entspannen können. Stützt die Matratze nicht richtig, kann die Wirbelsäule über die Liegedauer abknicken oder durchhängen – typische Folgen sind Verspannungen und ein Aufwachen mit steifem Rücken. Eine passende Matratze federt vor allem an den Druckpunkten Schulter, Hüfte und Becken ab, während sie den restlichen Körper ausreichend stützt.</p>
+        <img src="images/hisleep_sleeping_man_web.jpg" alt="Mann schläft entspannt und tief auf einer stützenden Matratze">
+      </div>
 
       <h3 style="margin-top:28px;">Welcher Härtegrad zu welcher Schlafposition passt</h3>
       <div class="check-grid">
@@ -446,6 +464,7 @@
 
     <section class="block" id="faq">
       <h2>Häufige Fragen zum Matratzenkauf</h2>
+      <img src="images/hisleep_waking_woman_web.jpg" alt="Frau wacht ausgeruht und gut gelaunt in ihrem Bett auf" style="width:100%; max-height:280px; object-fit:cover; border-radius:12px; margin-bottom:24px;">
 
       <details class="faq-item">
         <summary>Wie oft sollte ich meine Matratze wechseln?</summary>
@@ -498,7 +517,6 @@
   <div>
     <a href="/">Startseite</a> · <a href="so-testen-wir.html">So testen wir</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a>
   </div>
-  <div class="fine">Diese Seite ist ein Advertorial von Hisleep (Trend Shopping Global) und dient der Bewerbung der Traummatratze. Preise und Rabattaktionen ohne Gewähr, Stand siehe Shop.</div>
 </footer>
 
 </body>

@@ -55,22 +55,29 @@
   .trust-bar .lbl { font-size: 12px; color: #aaa; margin-top: 2px; }
 
   .hero { background: var(--bg-soft); padding: 54px 20px 48px; border-bottom: 1px solid var(--card-border); }
-  .hero .wrap { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: center; }
-  .hero .photo { width: 100%; height: auto; border-radius: 14px; display: block; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+  .hero .wrap {
+    max-width: 1080px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.1fr 0.9fr;
+    grid-template-areas: "text photo" "callout photo";
+    gap: 20px 36px; align-items: center;
+  }
+  .hero .text-top { grid-area: text; }
+  .hero .callout { grid-area: callout; }
+  .hero .photo { grid-area: photo; width: 100%; height: auto; border-radius: 14px; display: block; box-shadow: 0 8px 30px rgba(0,0,0,0.08); align-self: stretch; object-fit: cover; }
   .eyebrow {
     display: inline-block; background: var(--red); color: #fff;
     font-weight: 700; font-size: 14px; letter-spacing: 0.03em;
     padding: 7px 16px; border-radius: 30px; margin-bottom: 22px;
   }
   .hero h1 { font-size: 34px; line-height: 1.25; margin: 0 0 20px; font-weight: 800; color: var(--ink); }
-  .hero p.sub { font-size: 19px; color: var(--ink-soft); margin: 0 0 26px; }
+  .hero p.sub { font-size: 19px; color: var(--ink-soft); margin: 0; }
   .hero .callout {
     background: #fff; border: 1px solid var(--card-border);
     border-radius: 10px; padding: 20px 24px; font-size: 16.5px; color: var(--ink-soft);
   }
   @media (max-width: 860px) {
-    .hero .wrap { grid-template-columns: 1fr; }
-    .hero .photo { max-width: 420px; margin: 0 auto 20px; }
+    .hero .wrap { grid-template-columns: 1fr; grid-template-areas: "text" "photo" "callout"; gap: 20px; }
+    .hero .photo { max-height: 320px; }
   }
 
   .layout { max-width: 1080px; margin: 0 auto; padding: 40px 20px; display: grid; grid-template-columns: 1fr 260px; gap: 40px; }
@@ -234,13 +241,13 @@
 
 <div class="hero">
   <div class="wrap">
-    <div>
+    <div class="text-top">
       <span class="eyebrow">Matratzen Test 2026</span>
       <h1>Matratzen Test: Wir haben 5 der meistgekauften Modelle verglichen –<br>nur einer ist unser Matratzen Testsieger</h1>
       <p class="sub">Wachen Sie morgens steifer auf als abends? Wir zeigen Ihnen, worauf es bei der besten Matratze für Ihren Schlaf wirklich ankommt.</p>
-      <div class="callout">Wenn Sie nach einer neuen Matratze suchen, werden Sie im Internet unzählig viele Angebote finden. Dass sich Härtegrad-Angaben und Materialqualität zwischen den Anbietern stark unterscheiden, ist auf den ersten Blick selten erkennbar. Entscheiden Sie sich für das falsche Modell, ist die Enttäuschung nach ein paar Monaten groß. Unsere Redaktion hat deshalb die fünf meistgekauften Matratzen anhand einheitlicher Kriterien verglichen.</div>
     </div>
     <img class="photo" src="images/hisleep_hero_stretch_web.jpg" alt="Frau streckt sich ausgeschlafen und erholt im Bett auf ihrer Matratze">
+    <div class="callout">Wenn Sie nach einer neuen Matratze suchen, werden Sie im Internet unzählig viele Angebote finden. Dass sich Härtegrad-Angaben und Materialqualität zwischen den Anbietern stark unterscheiden, ist auf den ersten Blick selten erkennbar. Entscheiden Sie sich für das falsche Modell, ist die Enttäuschung nach ein paar Monaten groß. Unsere Redaktion hat deshalb die fünf meistgekauften Matratzen anhand einheitlicher Kriterien verglichen.</div>
   </div>
 </div>
 
